@@ -1,0 +1,122 @@
+:root {
+    --logo-primary: #E65A41;
+    --logo-secondary: #F4806B;
+    --logo-background: #2b2b2a ;
+
+}
+
+
+@font-face {
+    font-family: 'arvo';
+    src: url('/fonts/Arvo-Italic.woff2') format('woff2'),
+         url('/fonts/Arvo-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Nav-Bar */
+
+.navbar {
+    height: 100%;
+    position: fixed;
+    width: 200px;
+    background-color: var(--logo-background);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px auto;
+}
+
+.navbar  .collapsible--expanded  {
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    background-color: var(--logo-background);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px auto;
+}
+
+.navbar__header {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--logo-background); 
+    color: var(--logo-secondary);
+    display: grid;
+    font-family: 'arvo';
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 1rem;
+    border-bottom: #F4806B solid 2px;
+    border-top-right-radius: 5px;
+}
+
+.navbar__logo {
+    align-self: center;
+    display: flex;
+    justify-self: left;
+    margin-top: 10px;
+}
+
+.navbar__logo--icon {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar__logo--text {
+    padding-left: 1rem;
+}
+
+.navbar__toggle {
+    display: flex;
+    justify-self: end;
+}
+
+.toggle--icon {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.menu__pages {
+    display: grid;
+    margin-top: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    list-style: none;
+    color: #fff;
+}
+
+.page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar__lil-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+    color: lightgrey;
+    font-size: x-small;
+}
+
+@media screen and (max-width: 200px) {
+    .navbar__header {
+        display: flex;
+        justify-content: flex-end; 
+        
+    }
+    .navbar__logo {
+        display: none;
+    }
+
+}
+
