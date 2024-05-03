@@ -1,11 +1,17 @@
 :root {
-    --primary: #CF0A0A;
-    --secondary: #DC5F00;
-    --accent:  #EEEEEE;
+    /* --primary: #10316B;
+    --secondary: #E25822;
+    --accent:  #ECECEB;
+    --background: #2b2b2a; */
+
+    --accent: #9370DB;
+    --primary: #6FCF8D;
     --background: #2b2b2a;
+    --background2: #2f3335;;
+    --secondary: #86827F;
+    --white: #fcfcfcff;
 
 }
-
 
 @font-face {
     font-family: 'arvo';
@@ -13,6 +19,89 @@
          url('/fonts/Arvo-Italic.woff') format('woff');
     font-weight: 400;
     font-style: italic;
+}
+
+h1 {
+    text-decoration: underline;
+    font-style: normal;
+    margin: 6px 0;
+}
+
+body {
+    font-family: arvo;
+}
+
+
+/* TESTING STUFF DELETE ONCE DONE */
+
+.holder {
+    display: flex;
+    margin: 30% 40%;
+    height: 200px;
+    width: 300px;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icons */
+
+.icon {
+    height: 30px;
+    width: 30px;
+    fill: var(--accent);
+}
+
+.icon-container {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 4px;
+    padding-top: 7px;
+    padding-left: 4px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+
+.btn {
+    height: 40px;
+    width: 150px;
+    border: solid 2px var(--secondary);
+    border-radius: 8px;
+    background-color: var(--background);
+    transition: background-color 300ms;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    border: solid 2.5px var(--white);
+    font-weight: 600;
+}
+
+.btn:hover .btn__text {
+    color: var(--white)
+}
+
+.btn__text {
+    padding: 11px 35px;
+    font-family: 'arvo';
+    font-size: 0.8rem;
+    margin: 0 0;
+    align-self: center;
+    justify-self: center;
+    color: var(--accent);
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Nav-Bar */
@@ -27,6 +116,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 300px auto;
+    transition: 300ms;
 }
 
 .navbar.shrunk  {
@@ -37,12 +127,12 @@
     align-items: center;
     justify-content: center;
     background-color: var(--background); 
-    color: var(--secondary);
+    color: var(--primary);
     display: grid;
     font-family: 'arvo';
     grid-template-columns: repeat(2, 1fr); 
     margin: 1rem;
-    border-bottom: #F4806B solid 2px;
+    border-bottom: var(--accent) solid 2px;
     border-top-right-radius: 5px;
 }
 
@@ -69,7 +159,7 @@
 }
 
 .toggle--icon {
-    color: var(--accent);
+    color: var(--white);
     width: 40px;
     height: 40px;
 }
@@ -84,15 +174,12 @@
 }
 
 .page {
-    margin: 30px 0px;
+    margin: 15px 0px;
     list-style: none;
     color: var(--accent);
 }
 
-.page a {
-    color: inherit;
-    text-decoration: none;
-}
+
 
 .navbar__lil-text {
     display: flex;
@@ -103,8 +190,125 @@
     font-size: x-small;
 }
 
+@media screen and (max-width: 1065px) {
+
+.navbar.shrink {
+    display: none;
+}
+
+}
+
 /* Collapsibles */
 
 .collapsible--hidden {
     display:none;
+}
+
+/* Title Block */
+
+.title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--background2) 60%, var(--accent) 140%);
+    padding: 19px 0;
+}
+
+.title-content {
+    width: 700px;
+    border-bottom: solid 2px #6FCF8D;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+/* Greeting Hero */
+
+.hero {
+    color: var(--white);
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to bottom right, 
+        var(--accent) -20%, 
+        var(--background2) 20%, 
+        var(--background2) 80%, 
+        var(--accent)120%)
+}
+
+.hero--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'arvo';
+    font-display: center;
+
+    width: 700px;
+    margin:  0 auto;
+    margin-top: 110px;
+}
+
+
+/* SkillSet & Its Cards */
+
+.skillset {
+    background-color: var(--background2);
+    display: flex;
+    background-image: linear-gradient(to bottom left, 
+        var(--accent) -20%, 
+        var(--background2) 20%, 
+        var(--background2) 80%, 
+        var(--background2)120%);
+    
+}
+
+.skillset-content {
+    margin: 0 auto;
+    padding-left: 70px;
+    display: flex;
+
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 15px;
+    box-shadow: 10px 10px 15px 0px #776a80;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.card__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.card__description {
+    margin: 0 10px;
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--white)
+}
+
+@media screen and (max-width:1065px) {
+    .skillset-content {
+        flex-direction: column;
+        padding: 0 4px;
+    }
+
+    .card {
+        margin: 20px 0;
+    }
 }
