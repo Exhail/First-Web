@@ -244,6 +244,10 @@ background-image: linear-gradient(to bottom right,
     background-image: linear-gradient(to right, var(--background2) 60%, var(--accent) 140%);
 }
 
+.title-block.about-me {
+    background-image: linear-gradient(to bottom, var(--background2) 30% , var(--accent) 150%);
+}
+
 .title-content {
     width: 700px;
     border-bottom: solid 2px #6FCF8D;
@@ -323,23 +327,30 @@ background-image: linear-gradient(to bottom right,
 
 /* SkillSet & Its Cards */
 
-.skillset {
+.card-block {
     background-color: var(--background2);
     display: flex;
+}
+
+.card-block.skills {
+    background-image: url(/img/codebackground2.png);
+}
+
+.card-block.social { 
     background-image: linear-gradient(to bottom left, 
         var(--accent) -20%, 
         var(--background2) 20%, 
         var(--background2) 80%, 
         var(--background2)120%);
-    padding-bottom: 30px;   
-    background-image: url(/img/codebackground2.png);
 }
 
-.skillset-content {
+.card-block.social.two {
+}
+
+.card-block__content {
     margin: 0 auto;
     padding-left: 70px;
     display: flex;
-    padding-top: 30px;
 }
 
 .card {
@@ -348,14 +359,28 @@ background-image: linear-gradient(to bottom right,
     border: 3px solid var(--accent);
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 15px;
+    margin: 30px 15px;
     background-color: var(--background2);
     box-shadow: 10px 10px 15px 0px #776a80;
 }
 
+.small-card {
+    height: 170px;
+    width: 300px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 7px;
+    box-shadow: 10px 10px 5px 0px var(--background);
+}
+
 .card-title {
     font-size: 1.2rem;
-    color: var(--accent);
+    color: var(--primary);
+}
+
+.card-title.social {
+    font-size: 1rem;
 }
 
 .card__heading {
@@ -363,7 +388,7 @@ background-image: linear-gradient(to bottom right,
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    background-color: var(--primary);
+    background-color: var(--background);
     color: var(--white);
 }
 
@@ -374,13 +399,14 @@ background-image: linear-gradient(to bottom right,
     color: var(--white)
 }
 
+
 @media screen and (max-width:1065px) {
-    .skillset {
+    .card-block.skills {
     background-size: cover;
     background-repeat: no-repeat;
     }
 
-    .skillset-content {
+    .card-block__content {
         flex-direction: column;
         padding: 0 4px;
     }
