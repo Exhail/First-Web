@@ -44,6 +44,28 @@ body {
     justify-content: center;
 }
 
+.background-Holder{
+    /* #1 */
+background-image: linear-gradient(to bottom right, 
+        var(--accent) -20%, 
+        var(--background2) 20%, 
+        var(--background2) 80%, 
+        var(--accent)120%);
+
+    /* #2 */
+    background-image: linear-gradient(to right, 
+        var(--background2) 60%, 
+        var(--accent) 140%);
+
+    /* #3 */
+    background-image: linear-gradient(to bottom left, 
+        var(--accent) -20%, 
+        var(--background2) 20%, 
+        var(--background2) 80%, 
+        var(--background2)120%);
+    padding-bottom: 30px;   
+}
+
 /* Icons */
 
 .icon {
@@ -102,6 +124,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Nav-Bar */
@@ -210,8 +233,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(to right, var(--background2) 60%, var(--accent) 140%);
     padding: 19px 0;
+}
+
+.title-block.technical {
+    background-color: var(--background2);
+}
+
+.title-block.social {
+    background-image: linear-gradient(to right, var(--background2) 60%, var(--accent) 140%);
 }
 
 .title-content {
@@ -223,6 +253,11 @@ body {
     flex-direction: column;
 }
 
+@media screen and (max-width: 1065px) {
+    .title-content {
+        width: 300px;
+    }
+}
 
 
 /* Greeting Hero */
@@ -230,24 +265,59 @@ body {
 .hero {
     color: var(--white);
     width: 100%;
-    height: 500px;
+    height: 100%;
     background-image: linear-gradient(to bottom right, 
         var(--accent) -20%, 
         var(--background2) 20%, 
         var(--background2) 80%, 
-        var(--accent)120%)
+        var(--accent)120%);
 }
 
-.hero--content {
+.hero-welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'arvo';
-    font-display: center;
-
-    width: 700px;
+    max-width: 700px;
     margin:  0 auto;
     margin-top: 110px;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero-title {
+    margin-top: 100px;
+    text-align: left;
+    padding-left: 150px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 20px 100px ;
+    max-width: 1900px;
+    align-items: center;
+}
+
+.hero__photo {
+    border-radius: 20px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+
+
+@media screen and (max-width: 1065px) {
+    .hero-title {
+        padding-left: 20px;
+    }
+
+    .hero-content {
+        margin: 20px 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100%;
+    }
+
+
 }
 
 
@@ -261,14 +331,15 @@ body {
         var(--background2) 20%, 
         var(--background2) 80%, 
         var(--background2)120%);
-    
+    padding-bottom: 30px;   
+    background-image: url(/img/codebackground2.png);
 }
 
 .skillset-content {
     margin: 0 auto;
     padding-left: 70px;
     display: flex;
-
+    padding-top: 30px;
 }
 
 .card {
@@ -278,6 +349,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin: 0 15px;
+    background-color: var(--background2);
     box-shadow: 10px 10px 15px 0px #776a80;
 }
 
@@ -303,6 +375,11 @@ body {
 }
 
 @media screen and (max-width:1065px) {
+    .skillset {
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
     .skillset-content {
         flex-direction: column;
         padding: 0 4px;
