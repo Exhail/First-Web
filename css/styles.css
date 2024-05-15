@@ -596,3 +596,24 @@ background-image: linear-gradient(to bottom right,
     }
 }
 
+ html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent)  var(--background); 
+}
+
+::-webkit-scrollbar {
+    width: 12px;  /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background); /* Use the background variable */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent); /* Use the accent variable */
+    border-radius: 10px;       /* Add rounded corners if desired */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--accent), 10%); /* Darken the accent color on hover */
+}
