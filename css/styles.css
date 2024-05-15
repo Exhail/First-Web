@@ -602,18 +602,18 @@ background-image: linear-gradient(to bottom right,
 }
 
 ::-webkit-scrollbar {
-    width: 12px;  /* Set the width of the scrollbar */
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--background); /* Use the background variable */
+    background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent); /* Use the accent variable */
-    border-radius: 10px;       /* Add rounded corners if desired */
+    background: var(--accent); 
+    border-radius: 10px;   
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: darken(var(--accent), 10%); /* Darken the accent color on hover */
+    background: darken(var(--accent), 10%);
 }
