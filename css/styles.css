@@ -596,3 +596,24 @@ background-image: linear-gradient(to bottom right,
     }
 }
 
+ html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent)  var(--background); 
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent); 
+    border-radius: 10px;   
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--accent), 10%);
+}
